@@ -1,0 +1,5 @@
+FROM nginx:1.15.12-alpine
+COPY conf/Shanghai /etc/localtime
+COPY conf/nginx.conf /etc/nginx/nginx.conf
+COPY conf/stage/stage.admin.bpp.lvyii.com.conf /etc/nginx/conf.d/stage.admin.bpp.lvyii.com.conf
+COPY dist/ /usr/share/nginx/html/
